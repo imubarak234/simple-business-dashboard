@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 
 import { useState } from 'react';
 import {
@@ -12,6 +13,7 @@ import { Link } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
+import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
@@ -22,6 +24,25 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { tokens } from '../../theme';
+
+const Item = ({
+  title, to, icon, selected, setSelected,
+}) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+  return (
+    <MenuItem
+      active={selected === title}
+      style={{ color: colors.grey[100] }}
+      onClick={() => setSelected(title)}
+      icon={icon}
+    >
+      <Typography>{title}</Typography>
+      <Link to={to} />
+    </MenuItem>
+  );
+};
 
 const Sidebars = () => {
   const theme = useTheme();
@@ -64,9 +85,9 @@ const Sidebars = () => {
         <Menu
           iconShape="sqaure"
           rootStyles={{
-            [`.${menuClasses.menuItemRoot}`]: {
-              padding: '5px 35px 5px 20px !important',
-            },
+            // [`.${menuClasses.menuItemRoot}`]: {
+            //   padding: '5px 35px 5px 20px !important',
+            // },
             [`.${menuClasses.menuItemRoot}:hover`]: {
               color: '#868dfb !important',
             },
@@ -75,6 +96,9 @@ const Sidebars = () => {
             },
             [`.${menuClasses.button}:hover`]: {
               color: '#868dfb !important',
+            },
+            [`.${menuClasses.button}`]: {
+              backgroundColor: 'transparent !important',
             },
             [`.${menuClasses.active}`]: {
               color: '#6870fa !important',
@@ -131,6 +155,87 @@ const Sidebars = () => {
               </Box>
             </Box>
           )}
+
+          <Box paddingLeft={isCollapsed ? undefined : '10%'}>
+            <Item
+              title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Manage Team"
+              to="/team"
+              icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Contacts Information"
+              to="/contacts"
+              icon={<ContactsOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Invoices Balances"
+              to="/invoices"
+              icon={<ReceiptOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Profile Form"
+              to="/form"
+              icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Calendar"
+              to="/calender"
+              icon={<CalendarTodayOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="FAQ Page"
+              to="/faq"
+              icon={<HelpOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Bar Chart"
+              to="/bar"
+              icon={<BarChartOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Pie Chart"
+              to="/pie"
+              icon={<PieChartOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Line Chart"
+              to="/line"
+              icon={<TimelineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Geography Chart"
+              to="/geography"
+              icon={<MapOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+          </Box>
         </Menu>
       </Sidebar>
     </Box>
