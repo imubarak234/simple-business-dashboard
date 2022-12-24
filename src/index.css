@@ -10,6 +10,11 @@ body,
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.ps-sidebar-root{
+  height: 100% !important;
+  border: none !important;
+}
+
 .app {
   display: flex;
   position: relative;

@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { ColorModeContext, useMode } from './theme';
 import Topbar from './scenes/global/Topbar';
 import Dashboard from './scenes/dashboard';
-import Sidebar from './scenes/global/Sidebar';
+import Sidebars from './scenes/global/Sidebar';
 // import Team from './scenes/team';
 // import Invoices from './scenes/invoices';
 // import Contacts from './scenes/contacts';
@@ -15,7 +15,6 @@ import Sidebar from './scenes/global/Sidebar';
 // import Geography from './scenes/geography';
 // import Calendar from './scenes/calendar'
 
-
 function App() {
   const [theme, colorMode] = useMode();
 
@@ -24,7 +23,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <Sidebar />
+          <Sidebars />
           <main className="content">
             <Topbar />
             <Routes>
