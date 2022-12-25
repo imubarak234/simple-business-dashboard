@@ -37,9 +37,11 @@ const Item = ({
       style={{ color: colors.grey[100] }}
       onClick={() => setSelected(title)}
       icon={icon}
+      routerLink={<Link to={to} />}
     >
-      <Typography>{title}</Typography>
-      <Link to={to} />
+      <Typography>
+        {title}
+      </Typography>
     </MenuItem>
   );
 };
