@@ -157,7 +157,7 @@ const BarChart = ({ isDashboard = false }) => {
       ]}
       role="application"
       ariaLabel="Nivo bar chart demo"
-      barAriaLabel={function (e) { return `${e.id}: ${e.formattedValue} in country: ${e.indexValue}`; }}
+      barAriaLabel={(e) => `${e.id}: ${e.formattedValue} in country: ${e.indexValue}`}
     />
   );
 };

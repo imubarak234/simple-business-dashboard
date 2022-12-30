@@ -1,6 +1,7 @@
-import { Box, Typography, useTheme } from '@mui/system';
+import { Box, Typography, useTheme } from '@mui/material';
+import PropTypes from 'prop-types';
 import { tokens } from '../theme';
-import ProgressCirlce from './progressCircle';
+import ProgressCirlce from './ProgressCircle';
 
 const StatBox = ({
   title, subtitle, icon, progress, increase,
@@ -46,6 +47,14 @@ const StatBox = ({
       </Box>
     </Box>
   );
+};
+
+StatBox.propTypes = {
+  progress: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  increase: PropTypes.string.isRequired,
+  icon: PropTypes.elementType.isRequired,
 };
 
 export default StatBox;
