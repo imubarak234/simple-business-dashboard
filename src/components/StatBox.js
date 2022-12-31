@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 import { tokens } from '../theme';
-import ProgressCirlce from './ProgressCircle';
+import ProgressCircle from './ProgressCircle';
 
 const StatBox = ({
   title, subtitle, icon, progress, increase,
@@ -26,7 +26,7 @@ const StatBox = ({
           </Typography>
         </Box>
         <Box>
-          <ProgressCirlce progress={progress} />
+          <ProgressCircle progress={progress} />
         </Box>
       </Box>
 
