@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# React Dashboard
+A simple designed react dashbord with standard data tables and charts. For businesses and cooperations
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
