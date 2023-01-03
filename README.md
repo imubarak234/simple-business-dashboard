@@ -5,6 +5,16 @@ A simple designed react dashbord with standard data tables and charts. For busin
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Built With
+- Material UI 
+- Javascript
+- React Bootstrap
+
+### Technologies used
+- Github
+- Gitflow
+- Visual Studio Code
+
 ## Available Scripts
 
 In the project directory, you can run:
