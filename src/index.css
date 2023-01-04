@@ -8,11 +8,16 @@ body,
   height: 100%;
   width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
+  overflow-y: auto;
 }
 
 .ps-sidebar-root{
   height: 100% !important;
   border: none !important;
+}
+
+.css-18cc77q {
+  margin: 10px 0 10px 0 !important;
 }
 
 .app {
