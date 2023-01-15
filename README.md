@@ -1,4 +1,4 @@
-# React Dashboard
+# Simple Business Dashboard
 A simple designed react dashbord with standard data tables and charts. For businesses and cooperations
 
 ## Built With
